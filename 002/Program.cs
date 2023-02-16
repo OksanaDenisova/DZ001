@@ -61,8 +61,6 @@
 // 7 -> да
 // 1 -> нет
 
-// булевый метод
-
 // bool Weekend (int Day)
 // {
 //     if (Day > 5)
@@ -73,7 +71,7 @@
 // Console.WriteLine("Введите день недели!");
 // int Day = Convert.ToInt32(Console.ReadLine());
 // if(Weekend(Day))
-// {
+// {Ы
 //     Console.WriteLine("Сегодня выходной!");
 // }
 // else
