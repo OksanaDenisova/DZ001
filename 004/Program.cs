@@ -1,95 +1,61 @@
-﻿/*методы,массивы
-Задача 1. Напишите программу, которая принимает на вход число (А) 
-и выдаёт сумму чисел от 1 до А.*/
-// int GetSum (int a)
-// {
-//     int sum = 0; // переменная куда записываем нащи данные//
+﻿// ЗАДАЧА 1
+// Напишите цикл который принимает на вход два числа(А и В) и возводит число А в натуральную степень В
+// 3,5  = 234
+// 2,4 = 16
+// Команда math не использовать
+// строго уиклом написать, выделяя переменные под результат, проработать поиск степени и выводим пользователю
 
-//     for(int current = 1; current <= a; current++) //вместо  while записываем цикл таким образом и задаем несколько условий его существования//
-//         sum += current;
-//     return sum;
-//     //пример с while:
-//     // int current = 1;
-//     // while (current<=a);         // их можно использовать в любом случае. то что удобнее то и бери
-//     // {                              //
-//     //     sum += current;
-//     //     current++;
-//     //}
-// }
-// Console.Write("Ввеите число: ");
-// int number  = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число А: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число B: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// int step = a;
 
-// int result = GetSum(number);
-// Console.WriteLine($"Сумма чисел от 1 до {number} = {result}");
-
-// ЗАДАЧА2.
-//Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
-
-
-// int Digits(int num)
-// {
-//     int digits = 0;
-//     if(num == 0) digits = 1;
-//     while (num != 0)
+//     for (int i = 1; i < b; i++)
 //     {
-//         num /= 10;
-//         digits++;
+//         step *= a;
 //     }
-//     return digits;
-// }
-// Console.Write("Enter your number: ");
-// int number  = Convert.ToInt32(Console.ReadLine());
 
-// int dig = Digits(number);
-// Console.WriteLine($"There are {dig} digits {number}");
+// Console.WriteLine("А в степени В равно: " + step);
 
-// ЗАДАЧА 3
-// Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+/* ЗАДАЧА 2. НАпишите программу, которая воспринимает на вход число и выдает сумму цифр в числе.
+452 = 11
+82 = 10
+9012 = 12
+( мы такое уже делали но искали количество цифр в числе) чтобы найти не количество а сумму цифр в числе нужно 
+поменять пару символов */
 
-// int Factorial (int num)
+// int Sum(int num)
 // {
-//     int result = 1;
-//     for(int current = 1; current <= num; current++)
+//     int result = 0;
+//     while (num > 0)
 //     {
-//         result *= current;
+//         result += num % 10;
+//         num = num / 10;
 //     }
 //     return result;
 // }
-// Console.Write("Enter your number: ");
-// int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите ваше число: ");
+// int number  = Convert.ToInt32(Console.ReadLine());
 
-// int result =Factorial(number);
+// int dig = Sum(number);
+// Console.WriteLine($"Сумма всех числев в числе {number} равна {dig}");
 
-// Console.WriteLine($"Factorial of number {number} is {result}");
+/*Задача 3. Напишите программу, которая задает массив из M элементов и выводит их на экран
+тут нужно попросить пользователя ввести все элементы массива.
+потом записать их в массив и вывести на экран
+*/
 
-/* Массивы не выводятся через writeline.
-метод который будет генерировать массив и заполнять его случайными числами*/
-
-// назвать массив, в () указать переменную размера, органичить числа какие берет рандом от мин до мах
-//[указать его ]
-
-int[] CreateRandomArray(int size, int minValue, int maxValue)
-{
-    int[] array = new int[size];
-    for(int i = 0; i < size; i ++)
-        array[i] = new Random().Next(minValue, maxValue + 1);
-    return array;
-}
-
-void ShowArray(int[] array)
-{
-    for(int i = 0; i < array.Length; i++)
-        Console.Write(array [i] + " ");
-    Console.WriteLine();
-}
-
-Console.Write("Введите количество элементов: ");
-int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Минимально возможное значение: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Максисально возможное значение: ");
-int max = Convert.ToInt32(Console.ReadLine());
-
-int[] newArray = CreateRandomArray(size,min,max);
-ShowArray(newArray);
+// int[] array = new int [8];
+// Console.Write ("[");
+//     for(int i = 0; i < array.Length; i ++)
+//     {
+//         array [i] = new Random().Next(0,100);
+//         Console.Write(" " + Method (i) + " ");
+//     }
+// Console.Write ("]");
+// int Method (int a)
+// {
+//     return array[a];
+// }
 
