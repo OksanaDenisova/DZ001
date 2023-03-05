@@ -106,7 +106,7 @@
 
 // void ArrayRandom(double [] numbers)
 // {
-//     for (int i = 0; i<numbers.Length; i++)
+//     for (int i = 0; i < numbers.Length; i++)
 //     {
 //         numbers[i] = Convert.ToDouble(new Random().Next(100,1000) / 10);
     
