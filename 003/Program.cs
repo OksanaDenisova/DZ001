@@ -5,10 +5,10 @@
 // как во второй домашке второго семинара бегать по числам
 //
 
-// Console.Write("Введите числ: ");
+// Console.Write("Введите число: ");
 // int num = Convert.ToInt32(Console.ReadLine());
 
-// int revers(int num)
+// int revers(int num)         //Метод отвечающий за разворот числа
 // {
 //     int i = 0;
 //     while(num > 0)
@@ -18,7 +18,8 @@
 //     }
 //     return i;
 // }
-// int palindrome(int n)
+
+// int palindrome(int n)            // Метод который сравнивает изначальное число с развернутым
 // {
 //     int revNum  = revers(n);
 //     if (revNum == n)
@@ -26,6 +27,7 @@
 //     else
 //         return 0;
 // }
+//
 // int input = palindrome(num);
 // if(input > 0 )
 //     Console.WriteLine("Палиндром");
